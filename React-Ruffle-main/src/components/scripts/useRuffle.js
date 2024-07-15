@@ -15,7 +15,9 @@ const useRuffle = (Rufflecontainer, gsource, width, height) => {
     if (!width) width = "100%";
     if (!height) height = "100%";
     if (!Rufflecontainer) throw new Error("Rufflecontainer is required");
-    useScript('/ruffle/ruffle.js')
+    // useScript('/ruffle/ruffle.js')
+    useScript('https://unpkg.com/@ruffle-rs/ruffle')
+    
     useEffect(() => {
         window.RufflePlayer = window.RufflePlayer || {};
         window.RufflePlayer.config = {
